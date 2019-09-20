@@ -20,7 +20,7 @@ enum ShapeType: String, CaseIterable {
         case .circle:       return SHCircleItem.self
         case .protractor:   return SHProtractorItem.self
         case .exProtractor: return SHExProtractorItem.self
-        case .pencil:       return SHItem.self
+        case .pencil:       return SHPencilItem.self
         }
     }
 }
