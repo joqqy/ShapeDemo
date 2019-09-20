@@ -11,7 +11,7 @@
 		09CB9F97232B355800160129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB9F96232B355800160129 /* ViewController.swift */; };
 		09CB9F99232B355B00160129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CB9F98232B355B00160129 /* Assets.xcassets */; };
 		09CB9F9C232B355B00160129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CB9F9A232B355B00160129 /* Main.storyboard */; };
-		8585C53B2334D96E00DF345A /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 8585C53A2334D96E00DF345A /* Shape */; };
+		09CE1F41233546FA00CA4E85 /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 09CE1F40233546FA00CA4E85 /* Shape */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8585C53B2334D96E00DF345A /* Shape in Frameworks */,
+				09CE1F41233546FA00CA4E85 /* Shape in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			);
 			name = ShapeDemo;
 			packageProductDependencies = (
-				8585C53A2334D96E00DF345A /* Shape */,
+				09CE1F40233546FA00CA4E85 /* Shape */,
 			);
 			productName = ShapeDemo;
 			productReference = 09CB9F91232B355800160129 /* ShapeDemo.app */;
@@ -135,7 +135,7 @@
 			);
 			mainGroup = 09CB9F88232B355800160129;
 			packageReferences = (
-				8585C5392334D96E00DF345A /* XCRemoteSwiftPackageReference "Shape" */,
+				09CE1F3F233546FA00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */,
 			);
 			productRefGroup = 09CB9F92232B355800160129 /* Products */;
 			projectDirPath = "";
@@ -359,7 +359,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8585C5392334D96E00DF345A /* XCRemoteSwiftPackageReference "Shape" */ = {
+		09CE1F3F233546FA00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scchnxx/Shape.git";
 			requirement = {
@@ -370,9 +370,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8585C53A2334D96E00DF345A /* Shape */ = {
+		09CE1F40233546FA00CA4E85 /* Shape */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8585C5392334D96E00DF345A /* XCRemoteSwiftPackageReference "Shape" */;
+			package = 09CE1F3F233546FA00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */;
 			productName = Shape;
 		};
 /* End XCSwiftPackageProductDependency section */

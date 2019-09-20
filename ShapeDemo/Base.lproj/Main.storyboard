@@ -713,8 +713,8 @@
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1J-um-jI4">
                                 <rect key="frame" x="4" y="4" width="480" height="300"/>
                                 <subviews>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-SY-grm">
-                                        <rect key="frame" x="92" y="279" width="297" height="21"/>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-SY-grm">
+                                        <rect key="frame" x="46" y="279" width="388" height="21"/>
                                         <subviews>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Cc-0vQ">
                                                 <rect key="frame" x="-2" y="-3" width="77" height="25"/>
@@ -731,7 +731,7 @@
                                                 </popUpButtonCell>
                                             </popUpButton>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zYR-nY-r0T">
-                                                <rect key="frame" x="70" y="-7" width="65" height="32"/>
+                                                <rect key="frame" x="70" y="-7" width="80" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Gen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZB8-u6-UA8">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -741,7 +741,7 @@
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Plx-An-UAa">
-                                                <rect key="frame" x="127" y="-7" width="76" height="32"/>
+                                                <rect key="frame" x="142" y="-7" width="80" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Finish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qF8-Q1-HhK">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -754,7 +754,7 @@ Gw
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HRh-0B-l9Z">
-                                                <rect key="frame" x="195" y="-7" width="80" height="32"/>
+                                                <rect key="frame" x="214" y="-7" width="80" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0RZ-8y-WXU">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -767,12 +767,19 @@ CA
                                                 </connections>
                                             </button>
                                             <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Htv-P6-Jro">
-                                                <rect key="frame" x="271" y="-3" width="28" height="27"/>
+                                                <rect key="frame" x="290" y="-3" width="28" height="27"/>
                                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="359" allowsTickMarkValuesOnly="YES" sliderType="circular" id="TNN-Ms-W3f"/>
                                                 <connections>
                                                     <action selector="rotationSliderDidChangeValue:" target="XfG-lQ-9wD" id="aq6-3J-m3w"/>
                                                 </connections>
                                             </slider>
+                                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gFK-Qd-Gxl">
+                                                <rect key="frame" x="320" y="0.0" width="68" height="21"/>
+                                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="shapeColorWellDidChangeValue:" target="XfG-lQ-9wD" id="m1l-fS-wbH"/>
+                                                </connections>
+                                            </colorWell>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ESE-tv-MTS"/>
@@ -783,8 +790,10 @@ CA
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -799,7 +808,7 @@ CA
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                         <subviews>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Cbk-Pw-sxb">
-                                                <rect key="frame" x="386" y="250" width="92" height="16"/>
+                                                <rect key="frame" x="2" y="250" width="92" height="16"/>
                                                 <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="VmG-d1-osY">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -809,8 +818,9 @@ CA
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="LA6-cW-EkM" secondAttribute="height" multiplier="16:9" id="06R-IM-qAm"/>
-                                            <constraint firstAttribute="trailing" secondItem="Cbk-Pw-sxb" secondAttribute="trailing" constant="4" id="TF8-vy-pMv"/>
+                                            <constraint firstItem="Cbk-Pw-sxb" firstAttribute="leading" secondItem="LA6-cW-EkM" secondAttribute="leading" constant="4" id="0xC-c9-t7F"/>
                                             <constraint firstItem="Cbk-Pw-sxb" firstAttribute="top" secondItem="LA6-cW-EkM" secondAttribute="top" constant="4" id="f9t-cP-EEI"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cbk-Pw-sxb" secondAttribute="trailing" constant="20" symbolic="YES" id="m3H-r1-sv1"/>
                                         </constraints>
                                     </customView>
                                 </subviews>
@@ -837,6 +847,7 @@ CA
                         <outlet property="finishButton" destination="Plx-An-UAa" id="9Bl-3F-hU1"/>
                         <outlet property="removeButton" destination="HRh-0B-l9Z" id="kTN-P9-50N"/>
                         <outlet property="rotationSlider" destination="Htv-P6-Jro" id="N3J-0w-a7s"/>
+                        <outlet property="shapeColorWell" destination="gFK-Qd-Gxl" id="H1H-vX-JvF"/>
                         <outlet property="shapeInfoLabel" destination="Cbk-Pw-sxb" id="LWM-Je-nxx"/>
                         <outlet property="shapeListButton" destination="tw5-Cc-0vQ" id="qgK-wx-xxQ"/>
                         <outlet property="shapeView" destination="LA6-cW-EkM" id="Ksg-3V-uVD"/>

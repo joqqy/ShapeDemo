@@ -32,7 +32,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var shapeView: SHView!
     @IBOutlet weak var removeButton: NSButton!
 	@IBOutlet weak var rotationSlider: NSSlider!
-	@IBOutlet weak var shapeInfoLabel: NSTextField!
+    @IBOutlet weak var shapeColorWell: NSColorWell!
+    @IBOutlet weak var shapeInfoLabel: NSTextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ class ViewController: NSViewController {
         
         shapeView.backgroundColor = .highlightColor
         shapeView.delegate = self
+        shapeView.layer?.cornerRadius = 4
 		
         updateUI()
     }
@@ -67,15 +69,19 @@ class ViewController: NSViewController {
         
 		removeButton.isEnabled = !shapeView.selectedItemIndexes.isEmpty
 		
-		if shapeView.selectedItems.count == 1, let item = shapeView.selectedItems.first {
+		if let item = shapeView.currentItem ?? (shapeView.selectedItems.count == 1 ? shapeView.selectedItems.first : nil) {
 			let degrees = degreesFromRadians(-item.rotationAngle)
-			rotationSlider.isEnabled = true
-			rotationSlider.doubleValue = Double(degrees)
+            if item == shapeView.selectedItems.first {
+                rotationSlider.isEnabled = true
+                rotationSlider.doubleValue = Double(degrees)
+            }
 			shapeInfoLabel.stringValue = infoText(of: item)
+            shapeColorWell.color = item.tintColor
 		} else {
 			rotationSlider.isEnabled = false
 			rotationSlider.doubleValue = 0
 			shapeInfoLabel.stringValue = ""
+            shapeColorWell.color = shapeView.itemTintColor
 		}
     }
 	
@@ -131,6 +137,18 @@ class ViewController: NSViewController {
 		}
 	}
 	
+    @IBAction func shapeColorWellDidChangeValue(_ sender: NSColorWell) {
+        if let item = shapeView.currentItem {
+            item.tintColor = sender.color
+        } else if !shapeView.selectedItems.isEmpty {
+            shapeView.selectedItems.forEach { item in
+                item.tintColor = sender.color
+            }
+        } else {
+            shapeView.itemTintColor = sender.color
+        }
+    }
+    
 }
 
 extension ViewController: SHViewDelegate {
@@ -140,7 +158,7 @@ extension ViewController: SHViewDelegate {
     }
     
     func shapeView(_ shapeView: SHView, finishing item: SHItem) {
-        
+        updateUI()
     }
     
     func shapeView(_ shapeView: SHView, didFinish item: SHItem) {
