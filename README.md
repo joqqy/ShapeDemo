@@ -1,6 +1,6 @@
 # ShapeDemo
 
-Demo project to [Shape](https://github.com/scchnxx/Shape).
+Demo project of [Shape](https://github.com/scchnxx/Shape).
 
 # macOS
 
