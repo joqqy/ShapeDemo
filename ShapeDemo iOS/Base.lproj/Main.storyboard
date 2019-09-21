@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShapeDemo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-vz-usc">
+                                <rect key="frame" x="4" y="48" width="406" height="810"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="j29-mC-Ajd">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-6d-8CS">
+                                                <rect key="frame" x="0.0" y="0.0" width="201" height="30"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Finish"/>
+                                                <connections>
+                                                    <action selector="finishButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xer-U0-Eus"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-0J-unH">
+                                                <rect key="frame" x="205" y="0.0" width="201" height="30"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Delete"/>
+                                                <connections>
+                                                    <action selector="removeButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxo-L9-Ul5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="359" translatesAutoresizingMaskIntoConstraints="NO" id="cRX-ZB-oeX">
+                                        <rect key="frame" x="-2" y="34" width="410" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F2g-uc-XFH"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="rotationSliderDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="qnM-3D-MDT"/>
+                                        </connections>
+                                    </slider>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="459-Oc-Aqd" customClass="SHView" customModule="Shape">
+                                        <rect key="frame" x="0.0" y="68" width="406" height="708"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohS-y8-etJ">
+                                        <rect key="frame" x="0.0" y="780" width="406" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-YX-MRl">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg5-fk-rBJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="JcT-MJ-JUl"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="A6E-Bv-FWy"/>
+                                            <constraint firstItem="U2Q-M9-SiW" firstAttribute="height" secondItem="uJb-YX-MRl" secondAttribute="height" id="DHH-WG-lyP"/>
+                                            <constraint firstItem="uJb-YX-MRl" firstAttribute="top" secondItem="ohS-y8-etJ" secondAttribute="top" id="q3K-9u-KwV"/>
+                                            <constraint firstItem="uJb-YX-MRl" firstAttribute="leading" secondItem="ohS-y8-etJ" secondAttribute="leading" id="s9p-Nl-HoB"/>
+                                            <constraint firstItem="U2Q-M9-SiW" firstAttribute="width" secondItem="uJb-YX-MRl" secondAttribute="width" id="u2i-AJ-uGl"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="U2Q-M9-SiW"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="yIn-UD-Ocq"/>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="459-Oc-Aqd" firstAttribute="width" secondItem="eXJ-vz-usc" secondAttribute="width" id="2rc-5f-mUT"/>
+                                    <constraint firstItem="cRX-ZB-oeX" firstAttribute="width" secondItem="eXJ-vz-usc" secondAttribute="width" id="S5n-Zj-XRQ"/>
+                                    <constraint firstItem="ohS-y8-etJ" firstAttribute="width" secondItem="eXJ-vz-usc" secondAttribute="width" id="XUe-As-IOC"/>
+                                    <constraint firstItem="j29-mC-Ajd" firstAttribute="width" secondItem="eXJ-vz-usc" secondAttribute="width" id="ikI-Gw-d2x"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnq-OE-N21">
+                                <rect key="frame" x="8" y="120" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mnq-OE-N21" firstAttribute="leading" secondItem="459-Oc-Aqd" secondAttribute="leading" constant="4" id="35V-bu-tGk"/>
+                            <constraint firstItem="eXJ-vz-usc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="Aq5-vG-eGn"/>
+                            <constraint firstItem="eXJ-vz-usc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="IRa-sr-NKc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXJ-vz-usc" secondAttribute="bottom" constant="4" id="NsT-QS-Jhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXJ-vz-usc" secondAttribute="trailing" constant="4" id="Qim-lo-7yO"/>
+                            <constraint firstItem="Mnq-OE-N21" firstAttribute="top" secondItem="459-Oc-Aqd" secondAttribute="top" constant="4" id="cBj-0U-Ghu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="finishButton" destination="QSq-6d-8CS" id="lJn-EC-Bwt"/>
+                        <outlet property="removeButton" destination="Y7d-0J-unH" id="29O-2z-nZ1"/>
+                        <outlet property="rotationSlider" destination="cRX-ZB-oeX" id="IKn-Zm-O4a"/>
+                        <outlet property="shapeInfoLabel" destination="Mnq-OE-N21" id="59P-SO-lgP"/>
+                        <outlet property="shapeListStackView" destination="uJb-YX-MRl" id="l8k-QY-MkT"/>
+                        <outlet property="shapeView" destination="459-Oc-Aqd" id="rly-Hn-Vzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+</document>
