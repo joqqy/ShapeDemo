@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095DBF44233638BA0075933E /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF43233638BA0075933E /* ShapeType.swift */; };
+		095DBF45233638BC0075933E /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF43233638BA0075933E /* ShapeType.swift */; };
+		095DBF47233638E70075933E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF46233638E70075933E /* Functions.swift */; };
+		095DBF48233639140075933E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF46233638E70075933E /* Functions.swift */; };
+		095DBF4A2336393B0075933E /* SHItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF492336393B0075933E /* SHItem.swift */; };
+		095DBF4B233639600075933E /* SHItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DBF492336393B0075933E /* SHItem.swift */; };
 		09CB9F95232B355800160129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB9F94232B355800160129 /* AppDelegate.swift */; };
 		09CB9F97232B355800160129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB9F96232B355800160129 /* ViewController.swift */; };
 		09CB9F99232B355B00160129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CB9F98232B355B00160129 /* Assets.xcassets */; };
@@ -45,6 +51,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		095DBF43233638BA0075933E /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		095DBF46233638E70075933E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		095DBF492336393B0075933E /* SHItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHItem.swift; sourceTree = "<group>"; };
 		09CB9F91232B355800160129 /* ShapeDemo macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShapeDemo macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CB9F94232B355800160129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09CB9F96232B355800160129 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095DBF42233638B20075933E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				095DBF43233638BA0075933E /* ShapeType.swift */,
+				095DBF46233638E70075933E /* Functions.swift */,
+				095DBF492336393B0075933E /* SHItem.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		09CB9F88232B355800160129 = {
 			isa = PBXGroup;
 			children = (
+				095DBF42233638B20075933E /* Shared */,
 				09CB9F93232B355800160129 /* ShapeDemo macOS */,
 				09CE1F9D23360A1E00CA4E85 /* ShapeDemo iOS */,
 				09CB9F92232B355800160129 /* Products */,
@@ -248,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CB9F97232B355800160129 /* ViewController.swift in Sources */,
+				095DBF4A2336393B0075933E /* SHItem.swift in Sources */,
+				095DBF44233638BA0075933E /* ShapeType.swift in Sources */,
 				09CB9F95232B355800160129 /* AppDelegate.swift in Sources */,
+				095DBF47233638E70075933E /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CE1FA323360A1E00CA4E85 /* ViewController.swift in Sources */,
+				095DBF45233638BC0075933E /* ShapeType.swift in Sources */,
 				09CE1F9F23360A1E00CA4E85 /* AppDelegate.swift in Sources */,
+				095DBF48233639140075933E /* Functions.swift in Sources */,
 				09CE1FA123360A1E00CA4E85 /* SceneDelegate.swift in Sources */,
+				095DBF4B233639600075933E /* SHItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
