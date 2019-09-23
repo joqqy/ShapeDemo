@@ -1,8 +1,8 @@
 import Shape
 
-extension SHItem: CustomStringConvertible {
+extension SHItem {
     
-    public var description: String {
+	public var shapeInfoText: String {
         switch self {
         case let line as SHDistanceMeasurable:
             return line.distances.enumerated()
@@ -25,9 +25,15 @@ extension SHItem: CustomStringConvertible {
         case let angle as SHAngleMeasurable:
             return "Angle: \(format(degreesFromRadians(angle.angle)))"
             
+		case let angle as SHGnAngleMeasurable:
+			return """
+			Acute Angle : \(format(degreesFromRadians(angle.acuteAngle)))
+			Obtuse Angle: \(format(degreesFromRadians(angle.obtuseAngle)))
+			"""
+			
         default:
             return ""
         }
-    }
+	}
     
 }

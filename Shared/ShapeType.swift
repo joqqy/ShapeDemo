@@ -9,6 +9,7 @@ enum ShapeType: String, CaseIterable {
     case circle       = "Circle"
     case protractor   = "Protractor"
     case exProtractor = "ExProtractor"
+	case gnProtractor = "GnProtractor"
     case pencil       = "Pencil"
     
     var shType: SHItem.Type {
@@ -20,6 +21,7 @@ enum ShapeType: String, CaseIterable {
         case .circle:       return SHCircleItem.self
         case .protractor:   return SHProtractorItem.self
         case .exProtractor: return SHExProtractorItem.self
+		case .gnProtractor: return SHGnProtractor.self
         case .pencil:       return SHPencilItem.self
         }
     }

@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                 rotationSlider.isEnabled = true
                 rotationSlider.value = Float(degrees)
             }
-            shapeInfoLabel.text = "\(item)"
+            shapeInfoLabel.text = "\(item.shapeInfoText)"
         } else {
             rotationSlider.isEnabled = false
             rotationSlider.value = 0
@@ -96,10 +96,6 @@ extension ViewController: SHViewDelegate {
     
     func shapeView(_ shapeView: SHView, didModify item: SHItem) {
         updateUI()
-    }
-    
-    func shapeView(_ shapeView: SHView, didEndModify item: SHItem) {
-        
     }
     
     func shapeView(_ shapeView: SHView, didSelect items: [SHItem]) {

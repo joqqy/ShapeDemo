@@ -23,8 +23,8 @@
 		09CE1FA623360A1E00CA4E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE1FA423360A1E00CA4E85 /* Main.storyboard */; };
 		09CE1FA823360A2000CA4E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CE1FA723360A2000CA4E85 /* Assets.xcassets */; };
 		09CE1FAB23360A2000CA4E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE1FA923360A2000CA4E85 /* LaunchScreen.storyboard */; };
-		09CE1FB52336189B00CA4E85 /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 09CE1FB42336189B00CA4E85 /* Shape */; };
-		09CE1FB7233618A600CA4E85 /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 09CE1FB6233618A600CA4E85 /* Shape */; };
+		85939F852338809300A617E4 /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 85939F842338809300A617E4 /* Shape */; };
+		85939F87233880C200A617E4 /* Shape in Frameworks */ = {isa = PBXBuildFile; productRef = 85939F86233880C200A617E4 /* Shape */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CE1FB52336189B00CA4E85 /* Shape in Frameworks */,
+				85939F852338809300A617E4 /* Shape in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CE1FB7233618A600CA4E85 /* Shape in Frameworks */,
+				85939F87233880C200A617E4 /* Shape in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +173,7 @@
 			);
 			name = "ShapeDemo macOS";
 			packageProductDependencies = (
-				09CE1FB42336189B00CA4E85 /* Shape */,
+				85939F842338809300A617E4 /* Shape */,
 			);
 			productName = ShapeDemo;
 			productReference = 09CB9F91232B355800160129 /* ShapeDemo macOS.app */;
@@ -194,7 +194,7 @@
 			);
 			name = "ShapeDemo iOS";
 			packageProductDependencies = (
-				09CE1FB6233618A600CA4E85 /* Shape */,
+				85939F86233880C200A617E4 /* Shape */,
 			);
 			productName = "ShapeDemo iOS";
 			productReference = 09CE1F9C23360A1E00CA4E85 /* ShapeDemo iOS.app */;
@@ -228,7 +228,7 @@
 			);
 			mainGroup = 09CB9F88232B355800160129;
 			packageReferences = (
-				09CE1FB32336189B00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */,
+				85939F832338809300A617E4 /* XCRemoteSwiftPackageReference "Shape" */,
 			);
 			productRefGroup = 09CB9F92232B355800160129 /* Products */;
 			projectDirPath = "";
@@ -545,7 +545,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		09CE1FB32336189B00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */ = {
+		85939F832338809300A617E4 /* XCRemoteSwiftPackageReference "Shape" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scchnxx/Shape.git";
 			requirement = {
@@ -556,14 +556,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		09CE1FB42336189B00CA4E85 /* Shape */ = {
+		85939F842338809300A617E4 /* Shape */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 09CE1FB32336189B00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */;
+			package = 85939F832338809300A617E4 /* XCRemoteSwiftPackageReference "Shape" */;
 			productName = Shape;
 		};
-		09CE1FB6233618A600CA4E85 /* Shape */ = {
+		85939F86233880C200A617E4 /* Shape */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 09CE1FB32336189B00CA4E85 /* XCRemoteSwiftPackageReference "Shape" */;
+			package = 85939F832338809300A617E4 /* XCRemoteSwiftPackageReference "Shape" */;
 			productName = Shape;
 		};
 /* End XCSwiftPackageProductDependency section */
