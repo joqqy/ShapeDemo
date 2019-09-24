@@ -40,7 +40,8 @@ class ViewController: UIViewController {
         removeButton.isEnabled = !shapeView.selectedItemIndexes.isEmpty
         
         if let item = shapeView.currentItem ?? (shapeView.selectedItems.count == 1 ? shapeView.selectedItems.first : nil) {
-            let degrees = degreesFromRadians(-item.rotationAngle)
+            let angle = item.rotationAngle > 0 ? item.rotationAngle : .pi * 2 + item.rotationAngle
+            let degrees = degreesFromRadians(angle)
             if item == shapeView.selectedItems.first {
                 rotationSlider.isEnabled = true
                 rotationSlider.value = Float(degrees)
@@ -95,6 +96,10 @@ extension ViewController: SHViewDelegate {
     }
     
     func shapeView(_ shapeView: SHView, didModify item: SHItem) {
+        updateUI()
+    }
+    
+    func shapeView(_ shapeView: SHView, didRotate item: SHItem) {
         updateUI()
     }
     
