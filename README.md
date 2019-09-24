@@ -6,7 +6,7 @@ Demo project of [Shape](https://github.com/scchnxx/Shape).
 
 ![Drawing](https://media.giphy.com/media/Xd0z6GcM27hy5a4Dga/giphy.gif)
 
-![Rotation](https://media.giphy.com/media/f3dFtPedkGFsY3ticf/giphy.gif)
+![Rotation](https://media.giphy.com/media/QA6VCGdgaXBp4DcD10/giphy.gif)
 
 # iOS
 
