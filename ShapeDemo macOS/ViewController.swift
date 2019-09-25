@@ -5,18 +5,23 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var shapeListButton: NSPopUpButton!
     @IBOutlet weak var finishButton: NSButton!
-    @IBOutlet weak var shapeView: SHView!
     @IBOutlet weak var removeButton: NSButton!
 	@IBOutlet weak var rotationSlider: NSSlider!
-    @IBOutlet weak var shapeColorWell: NSColorWell!
+	@IBOutlet weak var rotationCheckBox: NSButton!
+	@IBOutlet weak var shapeColorWell: NSColorWell!
+    @IBOutlet weak var shapeView: SHView!
     @IBOutlet weak var shapeInfoLabel: NSTextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+        // set up shapeListButton
         shapeListButton.removeAllItems()
         shapeListButton.addItems(withTitles: ShapeType.allCases.map { $0.rawValue })
-        
+        // set up rotationSlider
+		rotationSlider.rotate(byDegrees: 90)
+		rotationCheckBox.state = (shapeView.isRotateToolEnabled ? .on : .off)
+		// set up shapeView
         shapeView.backgroundColor = .highlightColor
         shapeView.delegate = self
         shapeView.layer?.cornerRadius = 4
@@ -35,9 +40,9 @@ class ViewController: NSViewController {
 		
 		if let item = shapeView.currentItem ?? (shapeView.selectedItems.count == 1 ? shapeView.selectedItems.first : nil) {
             let angle = item.rotationAngle > 0 ? item.rotationAngle : .pi * 2 + item.rotationAngle
-			let degrees = degreesFromRadians(angle)
+			let degrees = 360 - degreesFromRadians(angle)
             if item == shapeView.selectedItems.first {
-                rotationSlider.isEnabled = true
+				rotationSlider.isEnabled = shapeView.isRotateToolEnabled
                 rotationSlider.doubleValue = Double(degrees)
             }
 			shapeInfoLabel.stringValue = "\(item.shapeInfoText)"
@@ -70,6 +75,11 @@ class ViewController: NSViewController {
 			let rotationAngle = radiansFromDegrees(-degrees)
 			item.rotate(rotationAngle)
 		}
+	}
+	
+	@IBAction func rotationCheckBoxDidChangeValue(_ sender: NSButton) {
+		shapeView.isRotateToolEnabled = (sender.state == .on)
+		updateUI()
 	}
 	
     @IBAction func shapeColorWellDidChangeValue(_ sender: NSColorWell) {

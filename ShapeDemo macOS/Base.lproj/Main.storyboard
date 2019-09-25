@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ShapeDemo" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ShapeDemo_macOS" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -705,7 +705,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ShapeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ShapeDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="488" height="308"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -714,7 +714,7 @@
                                 <rect key="frame" x="4" y="4" width="480" height="300"/>
                                 <subviews>
                                     <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-SY-grm">
-                                        <rect key="frame" x="46" y="279" width="388" height="21"/>
+                                        <rect key="frame" x="10" y="279" width="460" height="21"/>
                                         <subviews>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Cc-0vQ">
                                                 <rect key="frame" x="-2" y="-3" width="77" height="25"/>
@@ -773,8 +773,18 @@ CA
                                                     <action selector="rotationSliderDidChangeValue:" target="XfG-lQ-9wD" id="aq6-3J-m3w"/>
                                                 </connections>
                                             </slider>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-hO-9FM">
+                                                <rect key="frame" x="318" y="1" width="72" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Rotate" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="C3K-Qc-ahb">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="rotationCheckBoxDidChangeValue:" target="XfG-lQ-9wD" id="q4F-Ru-1ka"/>
+                                                </connections>
+                                            </button>
                                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gFK-Qd-Gxl">
-                                                <rect key="frame" x="320" y="0.0" width="68" height="21"/>
+                                                <rect key="frame" x="392" y="0.0" width="68" height="21"/>
                                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="shapeColorWellDidChangeValue:" target="XfG-lQ-9wD" id="m1l-fS-wbH"/>
@@ -791,8 +801,10 @@ CA
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -846,6 +858,7 @@ CA
                     <connections>
                         <outlet property="finishButton" destination="Plx-An-UAa" id="9Bl-3F-hU1"/>
                         <outlet property="removeButton" destination="HRh-0B-l9Z" id="kTN-P9-50N"/>
+                        <outlet property="rotationCheckBox" destination="Qiy-hO-9FM" id="eRL-4B-bUt"/>
                         <outlet property="rotationSlider" destination="Htv-P6-Jro" id="N3J-0w-a7s"/>
                         <outlet property="shapeColorWell" destination="gFK-Qd-Gxl" id="H1H-vX-JvF"/>
                         <outlet property="shapeInfoLabel" destination="Cbk-Pw-sxb" id="LWM-Je-nxx"/>
